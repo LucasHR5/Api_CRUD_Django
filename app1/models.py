@@ -72,6 +72,9 @@ class Employee(ModelBase):
         unique=True
     ) 
 
+    def __str__(self):
+        return self.name, self.registragion
+
 class Sale(ModelBase):
     product = models.ForeignKey(
         Product,

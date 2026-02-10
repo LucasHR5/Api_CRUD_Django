@@ -5,5 +5,6 @@ from app1 import urls as app1_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(app1_urls)),
+    path('api-auth/', include('rest_framework.urls')),
 ]
 

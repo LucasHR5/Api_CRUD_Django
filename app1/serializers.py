@@ -8,10 +8,12 @@ class ClientSerializer(serializers.ModelSerializer):
    age = serializers.IntegerField(
       min_value=18, max_value=100
    )
+   cpf = serializers.CharField(max_length=20)
+   rg = serializers.CharField(max_length=20)
 
    class Meta:
       model = models.Client
-      fields = ['id', 'name', 'age', 'created_at']
+      fields = ['id', 'name', 'age', 'cpf', 'rg', 'created_at']
 
 class EmployeeSerializer(serializers.ModelSerializer):
    id = serializers.IntegerField(read_only=True)
